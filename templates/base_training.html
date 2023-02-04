@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+{% if 'инженер' in prof %}
+    <h2>Инженерные тренажеры</h2>
+    <img src="/static/img/photo1.jpg">
+{% elif 'строитель' in prof %}
+    <h2>Научные симуляторы</h2>
+    <img src="/static/img/photo2.jpg">
+{% else %}
+    <h2>Вам в другое место((</h2>
+{% endif %}
+{% endblock %}
+
+</body>
+</html>
