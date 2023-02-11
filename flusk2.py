@@ -14,5 +14,10 @@ def training(prof):
     return render_template('base_training.html', prof=prof)
 
 
+@app.route('/list_prof/<list_type>')
+def prof_list(list_type):
+    return render_template('prof_list.html', list_type=list_type)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
