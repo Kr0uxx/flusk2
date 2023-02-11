@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/h4_style.css">
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<p>Фамилия: {{dictionary['surname']}}</p>
+<p>Имя: {{dictionary['name']}}</p>
+<p>Образование: {{dictionary['education']}}</p>
+<p>Профессия: {{dictionary['profession']}}</p>
+<p>Пол: {{dictionary['sex']}}</p>
+<p>Мотивация: {{dictionary['motivation']}}</p>
+<p>Готовы остаться на Марсе? {{dictionary['ready']}}</p>
+{% endblock %}
+</body>
+</html>
