@@ -19,5 +19,21 @@ def prof_list(list_type):
     return render_template('prof_list.html', list_type=list_type)
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    dictionary = {
+        'title': 'И на марсе будут яблони цвести',
+        'surname': 'Musk',
+        'name': 'Elon',
+        'education': 'Высшее',
+        'profession': 'Главный колонизатор марса',
+        'sex': 'male',
+        'motivation': 'Всегда мечтал стать президентом Марса!',
+        'ready': 'True'
+    }
+    return render_template('auto_answer.html', dictionary=dictionary)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
