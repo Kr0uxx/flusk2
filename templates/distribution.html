@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<h3>Размещение по каютам</h3>
+{% for ps in spis %}
+<p>{{ ps }} - Каюта №{{ loop.index }}{% if loop.first %} - капитан корабля{% endif %}</p>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
